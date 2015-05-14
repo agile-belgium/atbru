@@ -48,6 +48,16 @@ section.hero
     @media #{$more-than-phone}
       background-size: 100% auto
 
+  &.bg-atbru
+    background:
+      image: url(../../content/attachments/crowd.jpg)
+      position: center
+      size: auto 100%
+
+    @media #{$more-than-phone}
+      background-size: 100% auto
+
+
 
   .tpl-page &
     margin: -1em -1em 1em -1em
@@ -100,3 +110,10 @@ section.hero
 
       h2
         font-size: 3em
+      a
+        font-size: 1.2em
+        padding: 20px
+        &:hover
+          text-decoration: none
+          border-bottom: 1px solid transparent
+

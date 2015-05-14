@@ -2,7 +2,7 @@ Link text: Home
 Template: front
 Flags: primary
 
-%section{ :class => "hero bg-1" }
+%section{ :class => "hero bg-atbru" }
   .hero-content.l-2
     %h2
       Agile Tour Brussels is back!
@@ -11,6 +11,9 @@ Flags: primary
 
     %p
       Join us at Ephec in Brussels
+    %p.cta
+      %a.marked-text{href: "#"}
+        Submit a session
 
 :erb
   <%
@@ -51,7 +54,7 @@ Flags: primary
       .img-container
         %img{src: "/attachments/mauriziopedriale.jpg"}
         %h3 Maurizio Pedriale
-        %p @brunosbille
+        %p @mpedriale
     %li
       .img-container
         %img{src: "/attachments/olgasmirnova.jpg"}
