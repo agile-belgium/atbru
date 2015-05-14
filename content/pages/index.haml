@@ -1,4 +1,64 @@
 Link text: Home
-Template: Front
+Template: front
+Flags: primary
 
-%h1 Welcome to the front page
+%section{ :class => "hero bg-1" }
+  .hero-content.l-2
+    %h2
+      Agile Tour Brussels is back!
+      %br
+      November 2, 2015
+
+    %p
+      Join us at Ephec in Brussels
+
+:erb
+  <%
+    content = [
+      {
+        :title_icon => 'fa-group',
+        :title_text => '250 attendees',
+        :content    => 'ATBru 2014 reached 250 participants. This year, we\'re planning on getting as much as last year! ATBru is one of the biggest Agile conferences in Belgium.'
+      },
+      {
+        :title_icon => 'fa-road',
+        :title_text => '6 tracks',
+        :content    => 'ATBru is an all audience conference. We strive to have a wide program that suits any Agile practicioners levels. Workshops, Agile games, talks, we have it all.'
+      },
+      {
+        :title_icon => 'fa-coffee',
+        :title_text => 'Awesome food',
+        :content    => 'We know that to have a great conference, we need great food. That\'s why we work with local caterers to provide the best of Belgium at the conference.'
+      }
+    ]
+  %>
+
+= haml "partials/tri_usp".to_sym, :layout => false, :locals => { :content => content }
+
+%section.video{style: "text-align: center"}
+  %h2 See for yourself
+  %iframe{width: "800", height: "480", src: "https://www.youtube.com/embed/YF67LjM3SkM", frameborder: "0", allowfullscreen: true}
+
+%section.team{style: "text-align: center"}
+  %h2 Meet the team
+  %ul
+    %li
+      .img-container
+        %img{src: "/attachments/alanhortz.jpg"}
+        %h3 Alan Hortz
+        %p @alanhortz
+    %li
+      .img-container
+        %img{src: "/attachments/mauriziopedriale.jpg"}
+        %h3 Maurizio Pedriale
+        %p @brunosbille
+    %li
+      .img-container
+        %img{src: "/attachments/olgasmirnova.jpg"}
+        %h3 Olga Smirnova
+        %p @OlgaBohen
+    %li
+      .img-container
+        %img{src: "/attachments/francoisfrancart.jpg"}
+        %h3 François Francart
+        %p @ffrancart
