@@ -15,6 +15,8 @@
       %meta{:content => @description, :name => "description"}
     - if @keywords
       %meta{:content => @keywords, :name => "keywords"}
+    - if @ogimage
+      %meta{:content => @ogimage, :name => "og:image"}
 
     %link{:href => "/attachments/favicon.ico", :rel => "shortcut icon" }
     %link{:href => "//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css", :rel => "stylesheet"}
