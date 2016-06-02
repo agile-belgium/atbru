@@ -1,5 +1,2 @@
 /
-registration
-program
 sponsors
-details
